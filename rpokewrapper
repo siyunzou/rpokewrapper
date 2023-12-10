@@ -1,0 +1,10 @@
+Package: {{ Package }}
+Title: My Pokemon API Wrapper
+Version: 0.0.0.9000
+Authors@R: person('Siyun', 'Zou', email = 'sz3351@nyu.edu', role = c('cre', 'aut'))
+Description: This a Pokemon API Wrapper that assist with pulling some statistics from the Pokemon API.
+License: {{ License }}
+URL: http://this
+BugReports: http://that
+Encoding: UTF-8
+rpokewrapper: rpokewrapper
