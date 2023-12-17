@@ -1,4 +1,4 @@
-Package: {{ rpokewrapper }}
+Package: rpokewrapper
 Title: My Pokemon API Wrapper
 Version: 0.0.0.9000
 Authors@R: 
@@ -16,4 +16,5 @@ Imports:
     purrr
 Encoding: UTF-8
 RoxygenNote: 7.2.3
-rpokewrapper: rpokewrapper
+
+
