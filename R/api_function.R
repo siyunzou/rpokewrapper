@@ -41,30 +41,30 @@ poke_api <- function(path){
     })
 }
 
-pokemon_df <- data.frame()
-ids <- 1:151
-for (i in ids){
-  res <- poke_api(paste0('/pokemon/', i))
-  df = fromJSON(rawToChar(res$content))
+# pokemon_df <- data.frame()
+# ids <- 1:151
+# for (i in ids){
+#   res <- poke_api(paste0('/pokemon/', i))
+#   df = fromJSON(rawToChar(res$content))
+#
+#   ability <- df$abilities[,1, drop = FALSE] %>%
+#     reframe(abilities = paste(ability$name, collapse= ","))
+#
+#   pokemon <- df$name
+#   height <- df$height
+#   weight <- df$weight
+#   id <- df$id
+#
+#   type <- df$types[,2,drop = FALSE] %>%
+#     reframe(type = paste(type$name, collapse= ","))
+#
+#   moves <- head(df$moves[,1,drop=FALSE],5) %>%
+#     reframe(moves = paste(move$name, collapse= ","))
+#
+#   data <- data.frame(id, pokemon, height, weight, ability, type, moves)
+#   pokemon_df <- rbind(pokemon_df, data)
+# }
 
-  ability <- df$abilities[,1, drop = FALSE] %>%
-    reframe(abilities = paste(ability$name, collapse= ","))
+# usethis::use_data(pokemon_df)
 
-  pokemon <- df$name
-  height <- df$height
-  weight <- df$weight
-  id <- df$id
-
-  type <- df$types[,2,drop = FALSE] %>%
-    reframe(type = paste(type$name, collapse= ","))
-
-  moves <- head(df$moves[,1,drop=FALSE],5) %>%
-    reframe(moves = paste(move$name, collapse= ","))
-
-  data <- data.frame(id, pokemon, height, weight, ability, type, moves)
-  pokemon_df <- rbind(pokemon_df, data)
-}
-
-usethis::use_data(pokemon_df)
-
-devtools::test()
+# devtools::test()

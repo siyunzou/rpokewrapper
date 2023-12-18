@@ -5,12 +5,12 @@ library(desc)
 
 
 # Remove default DESC
-unlink("rpokewrapper")
+unlink("DESCRIPTION")
 # Create and clean desc
 my_desc <- description$new("!new")
 
 # Set your package name
-my_desc$set("rpokewrapper", "rpokewrapper")
+my_desc$set("Package", "rpokewrapper")
 
 #Set your name
 my_desc$set("Authors@R", "person('Siyun', 'Zou', email = 'sz3351@nyu.edu', role = c('cre', 'aut'))")
@@ -29,7 +29,7 @@ my_desc$set(Description = "This a Pokemon API Wrapper that assist with pulling s
 my_desc$set("URL", "http://this")
 my_desc$set("BugReports", "http://that")
 # Save everything
-my_desc$write(file = "rpokewrapper")
+my_desc$write(file = "DESCRIPTION")
 
 # If you want to use the MIT licence, code of conduct, and lifecycle badge
 use_mit_license()
